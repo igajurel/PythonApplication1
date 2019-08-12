@@ -40,11 +40,51 @@ class Utilities:
         print("The statement that element",element,"is present in the input list ",inp_list,"is",isElementPresent)
 
     #Write a function that returns the elements on odd positions in a list.
+    #O(n), however, it has been improvised to not iterate the unnecessary even position elements towards the end of input list
     def pullOddElements(inp_list):
         list_odd_elements = []
-        for i in range(0,len(inp_list)):
+        if(len(inp_list)%2 == 0): 
+            last_element = len(inp_list)-1
+        else:
+            last_element = len(inp_list)
+
+        for i in range(0,last_element):
+            print(i)
             if (i+1)%2 == 1:
                 list_odd_elements.append(inp_list[i])
         print("The elements which are in odd position are-", list_odd_elements)
         return list_odd_elements
 
+    #Write a function that computes the running total of a list.
+    #O(n)
+    def computeRunningTotal(inp_list):
+        running_total = inp_list[0]
+        for i in range(1,len(inp_list)):
+            running_total += inp_list[i]
+            print(running_total)
+
+    #Write a function that tests whether a string is a palindrome.
+    #O(creating a list out of string) + O(n) - reversed string + O(comparing the string)
+    def checkPalindrome(inp_string):
+        list_inp_string = list(inp_string)
+        print(list_inp_string)
+        reversed_string = Utilities.reversethelist(list_inp_string)
+        if(list_inp_string==reversed_string):
+            return True
+        return False
+
+    def checkPalindromeOptimized(inp_string):
+        inp_list = list(inp_string)
+        i = 0
+        j = len(inp_list)
+        for index in range(i,j):
+            print(i)
+            print(j)
+            #if inp_list[i] != inp_list[j]:
+            #    return False
+            if(i == j):
+                break
+            i = i+1
+            j = j-1
+
+        return True
