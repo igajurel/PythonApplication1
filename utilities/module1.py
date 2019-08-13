@@ -73,17 +73,17 @@ class Utilities:
             return True
         return False
 
+    #O(creating a list out of string) + O(n/2 as only half way traversal)  
+    #best case if first and last element itself doesn't match
     def checkPalindromeOptimized(inp_string):
         inp_list = list(inp_string)
         i = 0
         j = len(inp_list)
-        for index in range(i,j):
-            print(i)
-            print(j)
-            #if inp_list[i] != inp_list[j]:
-            #    return False
-            if(i == j):
-                break
+        while(i<=j):
+            #print(i)
+            #print(j)
+            if inp_list[i] != inp_list[j-1]:
+                return False
             i = i+1
             j = j-1
 

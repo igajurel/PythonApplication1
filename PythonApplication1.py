@@ -37,6 +37,11 @@ is_inpstr_palindrome = Utilities.checkPalindrome(x_string)
 print("The statement that the given string",x_string,"is a Palindrome is",is_inpstr_palindrome)
 
 
-x_string = "madam"
-is_inpstr_palindrome = Utilities.checkPalindromeOptimized(x_string)
+#xy_string = "madam"
+#xy_string = "abdba"
+#xy_string = "abcda"
+xy_string = "isxi"
+is_inpstr_palindrome_opt = Utilities.checkPalindromeOptimized(xy_string)
+print("*Optimized* - The statement that the given string",xy_string,"is a Palindrome is",is_inpstr_palindrome_opt)
+
 
