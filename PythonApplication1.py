@@ -44,4 +44,9 @@ xy_string = "isxi"
 is_inpstr_palindrome_opt = Utilities.checkPalindromeOptimized(xy_string)
 print("*Optimized* - The statement that the given string",xy_string,"is a Palindrome is",is_inpstr_palindrome_opt)
 
+inp_string1 = "listen"
+inp_string2 = "silent"
+Utilities.checkAnagrams(inp_string1, inp_string2)
 
+inp_list_unsorted = [3,1,5,6,4]
+Utilities.mergeSort(inp_list_unsorted)

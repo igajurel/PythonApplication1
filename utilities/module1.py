@@ -88,3 +88,44 @@ class Utilities:
             j = j-1
 
         return True
+
+    #Write a function to check if 2 strings are anagrams to each other
+    #s1 = listen #s2 silent
+    def checkAnagrams(str1, str2):
+        list1 = list(str1)
+        print(list1)
+
+        #for each in str1.tolist():
+        #    print(each)
+
+
+    def mergeSort(inp_list):
+        print("***")
+        size_of_list = len(inp_list)
+        mid = int(size_of_list/2)
+        print(inp_list)
+        print(mid)
+        print(">>>")
+        first_half = inp_list[0:mid]
+        second_half = inp_list[mid:size_of_list]
+        print(first_half)
+        print(second_half)
+        #looping first half
+        i=0
+        while(i<mid):
+            print(inp_list[i])
+            i = i+1
+        
+        print(">>>")
+        #looping second half
+        j=mid
+        while(j<size_of_list):
+            print(inp_list[j])
+            j = j+1
+        
+        return None
+
+    #Write three functions that compute the sum of the numbers in a list: 
+    #using a for-loop, a while-loop and recursion. 
+    #(Subject to availability of these constructs in your language of choice.)
+
